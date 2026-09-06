@@ -5,38 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Parul Pal | AI/ML Engineer</title>
+
     <meta name="description"
-        content="Parul Pal - AI/ML Developer Portfolio. Explore my projects, skills, internship experience, open-source contributions and certifications.">
+        content="Parul Pal - BCA student and aspiring AI/ML Engineer. Explore projects, skills, certifications and experience.">
 
-    <meta name="keywords"
-        content="Parul Pal, AI ML Developer, Machine Learning, Artificial Intelligence, Python, NLP, BCA, AI ML Internship">
-
-    <meta name="author" content="Parul Pal">
-    <meta name="theme-color" content="#0b0f19">
-
-    <title>Parul Pal | AI/ML Developer</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
+    <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <!-- =====================================================
-                            NAVBAR
+         NAVBAR
     ====================================================== -->
 
     <header class="navbar">
@@ -44,47 +33,31 @@
         <div class="nav-container">
 
             <a href="#home" class="logo">
-                <span>&lt;</span>Parul<span>/&gt;</span>
+                <span>Parul</span> Pal
             </a>
 
             <nav class="nav-menu" id="navMenu">
 
-                <a href="#home" class="nav-link active">Home</a>
-
+                <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
-
                 <a href="#skills" class="nav-link">Skills</a>
-
                 <a href="#projects" class="nav-link">Projects</a>
-
                 <a href="#experience" class="nav-link">Experience</a>
-
-                <a href="#certifications" class="nav-link">
-                    Certifications
-                </a>
-
+                <a href="#certifications" class="nav-link">Certifications</a>
                 <a href="#contact" class="nav-link">Contact</a>
 
             </nav>
 
             <div class="nav-actions">
 
-                <button
-                    class="theme-btn"
-                    id="themeBtn"
-                    aria-label="Toggle theme">
-
-                    <i class="fa-solid fa-moon"></i>
-
+                <button id="themeToggle" class="theme-toggle"
+                    aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
                 </button>
 
-                <button
-                    class="menu-btn"
-                    id="menuBtn"
-                    aria-label="Open menu">
-
-                    <i class="fa-solid fa-bars"></i>
-
+                <button id="menuToggle" class="menu-toggle"
+                    aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
                 </button>
 
             </div>
@@ -95,860 +68,101 @@
 
 
     <!-- =====================================================
-                              MAIN
+         HERO
     ====================================================== -->
 
     <main>
 
-        <!-- =================================================
-                              HERO
-        ================================================== -->
+        <section id="home" class="hero">
 
-        <section class="hero" id="home">
+            <div class="hero-container">
 
-            <div class="hero-grid"></div>
+                <div class="hero-content">
 
-            <div class="hero-content">
+                    <p class="hero-greeting">
+                        Hello, I'm
+                    </p>
 
-                <div class="availability">
+                    <h1>
+                        Parul <span>Pal</span>
+                    </h1>
 
-                    <span class="status-dot"></span>
+                    <h2>
+                        Aspiring AI/ML Engineer
+                    </h2>
 
-                    Available for AI/ML Internships
+                    <p class="hero-description">
+                        BCA student passionate about Artificial Intelligence,
+                        Machine Learning and building intelligent real-world
+                        applications using Python and modern technologies.
+                    </p>
 
-                </div>
+                    <div class="hero-buttons">
 
-                <p class="hero-intro">
-                    Hello, I'm
-                </p>
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-code"></i>
+                            View My Projects
+                        </a>
 
-                <h1>
-                    Parul <span>Pal</span>
-                </h1>
-
-                <h2>
-                    AI/ML
-                    <span class="typing-text"></span>
-                </h2>
-
-                <p class="hero-description">
-                    BCA student passionate about Artificial Intelligence,
-                    Machine Learning and building practical technology
-                    that solves real-world problems.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="#projects"
-                        class="btn primary-btn">
-
-                        View My Projects
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-                    <a
-                        href="./Resume -_Parul Pal.pdf"
-                        class="btn secondary-btn"
-                        target="_blank"
-                        rel="noopener noreferrer">
-
-                        View Resume
-
-                        <i class="fa-solid fa-file-lines"></i>
-
-                    </a>
-
-                </div>
-
-
-                <!-- SOCIAL LINKS -->
-
-                <div class="social-links">
-
-                    <a
-                        href="https://github.com/parulpal637"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="GitHub">
-
-                        <i class="fa-brands fa-github"></i>
-
-                    </a>
-
-                    <a
-                        href="https://www.linkedin.com/in/parul-pal-93a417349/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="LinkedIn">
-
-                        <i class="fa-brands fa-linkedin-in"></i>
-
-                    </a>
-
-                    <a
-                        href="mailto:eng.parul5418@gmail.com"
-                        aria-label="Email">
-
-                        <i class="fa-solid fa-envelope"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- HERO VISUAL -->
-
-            <div class="hero-visual">
-
-                <div class="orbit orbit-one"></div>
-
-                <div class="orbit orbit-two"></div>
-
-                <div class="ai-card">
-
-                    <div class="ai-card-top">
-
-                        <span class="window-dot red"></span>
-                        <span class="window-dot yellow"></span>
-                        <span class="window-dot green"></span>
+                        <a href="./Resume -_Parul Pal.pdf"
+                            class="btn btn-secondary"
+                            target="_blank">
+                            <i class="fas fa-file-alt"></i>
+                            View Resume
+                        </a>
 
                     </div>
 
-                    <div class="code-content">
+                    <div class="social-links">
+
+                        <a href="https://github.com/parulpal637"
+                            target="_blank"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/parul-pal-93a417349/"
+                            target="_blank"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+
+                        <a href="https://leetcode.com/u/Parulpal637/"
+                            target="_blank"
+                            aria-label="LeetCode">
+                            <i class="fas fa-code"></i>
+                        </a>
+
+                        <a href="https://www.hackerrank.com/profile/eng_parul5418"
+                            target="_blank"
+                            aria-label="HackerRank">
+                            <i class="fab fa-hackerrank"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual">
+
+                    <div class="hero-card">
+
+                        <div class="hero-card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+
+                        <h3>AI/ML</h3>
 
                         <p>
-                            <span class="purple">class</span>
-                            <span class="blue">AIEngineer</span>:
+                            Building intelligent solutions
                         </p>
 
-                        <p class="indent">
-                            <span class="purple">def</span>
-                            <span class="green">build</span>(self):
-                        </p>
+                        <div class="floating-tags">
 
-                        <p class="double-indent">
-                            projects = [
-                        </p>
-
-                        <p class="triple-indent">
-                            <span class="orange">
-                                "Vehline",
-                            </span>
-                        </p>
-
-                        <p class="triple-indent">
-                            <span class="orange">
-                                "NLP",
-                            </span>
-                        </p>
-
-                        <p class="triple-indent">
-                            <span class="orange">
-                                "Machine Learning"
-                            </span>
-                        </p>
-
-                        <p class="double-indent">
-                            ]
-                        </p>
-
-                        <p class="indent">
-
-                            <span class="purple">return</span>
-
-                            projects
-
-                        </p>
-
-                    </div>
-
-                    <div class="ai-symbol">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-                              ABOUT
-        ================================================== -->
-
-        <section class="section about-section" id="about">
-
-            <div class="section-heading">
-
-                <span class="section-number">01.</span>
-
-                <h2>About Me</h2>
-
-            </div>
-
-            <div class="about-grid">
-
-                <div class="about-text">
-
-                    <p>
-                        I'm <strong>Parul Pal</strong>, a BCA student at
-                        Hi-Tech Institute of Engineering & Technology,
-                        passionate about Artificial Intelligence and
-                        Machine Learning.
-                    </p>
-
-                    <p>
-                        I enjoy transforming ideas into practical
-                        applications using Python, Machine Learning,
-                        NLP and web technologies.
-                    </p>
-
-                    <p>
-                        My goal is to become an AI/ML Engineer and work
-                        on products that solve meaningful real-world
-                        problems.
-                    </p>
-
-                    <p>
-                        Currently, I'm strengthening my foundations in
-                        Machine Learning, Data Structures and Algorithms
-                        while continuously building projects and
-                        contributing to open-source communities.
-                    </p>
-
-                    <div class="about-stats">
-
-                        <div class="stat">
-                            <strong>2027</strong>
-                            <span>Graduation</span>
-                        </div>
-
-                        <div class="stat">
-                            <strong>AI/ML</strong>
-                            <span>Career Focus</span>
-                        </div>
-
-                        <div class="stat">
-                            <strong>GSSoC</strong>
-                            <span>Contributor</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="about-card">
-
-                    <div class="terminal-header">
-
-                        <span></span>
-                        <span></span>
-                        <span></span>
-
-                    </div>
-
-                    <div class="terminal-body">
-
-                        <p>
-                            <span class="terminal-purple">const</span>
-                            developer = {
-                        </p>
-
-                        <p class="terminal-indent">
-                            name:
-                            <span>"Parul Pal"</span>,
-                        </p>
-
-                        <p class="terminal-indent">
-                            role:
-                            <span>"AI/ML Developer"</span>,
-                        </p>
-
-                        <p class="terminal-indent">
-                            education:
-                            <span>"BCA"</span>,
-                        </p>
-
-                        <p class="terminal-indent">
-                            focus:
-                            <span>"Artificial Intelligence"</span>,
-                        </p>
-
-                        <p class="terminal-indent">
-                            passion:
-                            <span>"Building AI"</span>,
-                        </p>
-
-                        <p class="terminal-indent">
-                            learning:
-                            <span>"Every Day"</span>
-                        </p>
-
-                        <p>
-                            };
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-                              SKILLS
-        ================================================== -->
-
-        <section class="section skills-section" id="skills">
-
-            <div class="section-heading">
-
-                <span class="section-number">02.</span>
-
-                <h2>Skills</h2>
-
-            </div>
-
-            <p class="section-subtitle">
-                Technologies and tools I'm currently working with.
-            </p>
-
-            <div class="skills-grid">
-
-                <!-- PROGRAMMING -->
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-python"></i>
-                    </div>
-
-                    <h3>Programming</h3>
-
-                    <div class="skill-tags">
-
-                        <span>Python</span>
-                        <span>C++</span>
-                        <span>C</span>
-                        <span>JavaScript</span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- AI / ML -->
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-
-                    <h3>AI & Machine Learning</h3>
-
-                    <div class="skill-tags">
-
-                        <span>Machine Learning</span>
-                        <span>NLP</span>
-                        <span>Scikit-learn</span>
-                        <span>TF-IDF</span>
-                        <span>LLMs</span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- WEB -->
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-
-                    <h3>Web Development</h3>
-
-                    <div class="skill-tags">
-
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Flask</span>
-                        <span>Streamlit</span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- TOOLS -->
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-github"></i>
-                    </div>
-
-                    <h3>Tools & Platforms</h3>
-
-                    <div class="skill-tags">
-
-                        <span>Git</span>
-                        <span>GitHub</span>
-                        <span>VS Code</span>
-                        <span>Jupyter</span>
-                        <span>Pandas</span>
-                        <span>NumPy</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-                            PROJECTS
-        ================================================== -->
-
-        <section class="section projects-section" id="projects">
-
-            <div class="section-heading">
-
-                <span class="section-number">03.</span>
-
-                <h2>Featured Projects</h2>
-
-            </div>
-
-            <p class="section-subtitle">
-                Some of the projects I've built while learning and
-                experimenting with AI, ML and web development.
-            </p>
-
-            <div class="projects-grid">
-
-
-                <!-- VEHLINE -->
-
-                <article class="project-card featured-project">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            <i class="fa-solid fa-car"></i>
-                        </div>
-
-                        <span class="featured-label">
-                            Featured Project
-                        </span>
-
-                        <a
-                            href="https://github.com/parulpal637"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                            aria-label="Vehline GitHub">
-
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                        </a>
-
-                    </div>
-
-                    <h3>Vehline</h3>
-
-                    <p>
-                        A modern used-car marketplace concept designed
-                        to make buying and selling vehicles safer and
-                        more structured.
-                    </p>
-
-                    <p>
-                        The platform focuses on privacy, secure
-                        communication, bidding and transaction-based
-                        monetization.
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>Web Development</span>
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Flask</span>
-                        <span>Startup</span>
-
-                    </div>
-
-                    <div class="project-footer">
-
-                        <span>
-                            <i class="fa-solid fa-star"></i>
-                            Startup Project
-                        </span>
-
-                        <a
-                            href="https://github.com/parulpal637"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="view-project">
-
-                            View Project →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- AI PLAGIARISM -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            <i class="fa-solid fa-file-shield"></i>
-                        </div>
-
-                        <a
-                            href="https://github.com/parulpal637/AI-Based-Plagiarism-Detection-System-using-NLP-LLMs"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                            aria-label="AI Plagiarism GitHub">
-
-                            <i class="fa-brands fa-github"></i>
-
-                        </a>
-
-                    </div>
-
-                    <h3>AI Plagiarism Detection</h3>
-
-                    <p>
-                        NLP-based plagiarism detection system that
-                        compares documents using TF-IDF vectorization
-                        and cosine similarity.
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>Python</span>
-                        <span>NLP</span>
-                        <span>TF-IDF</span>
-                        <span>Cosine Similarity</span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- SENTIMENT ANALYSIS -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            <i class="fa-solid fa-face-smile"></i>
-                        </div>
-
-                        <a
-                            href="https://github.com/parulpal637/Sentiment-Analysis-ML"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                            aria-label="Sentiment Analysis GitHub">
-
-                            <i class="fa-brands fa-github"></i>
-
-                        </a>
-
-                    </div>
-
-                    <h3>Sentiment Analysis</h3>
-
-                    <p>
-                        Machine Learning project that classifies
-                        text sentiment using CountVectorizer and
-                        Logistic Regression.
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>Python</span>
-                        <span>ML</span>
-                        <span>NLP</span>
-                        <span>Logistic Regression</span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- SPAM -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            <i class="fa-solid fa-message"></i>
-                        </div>
-
-                        <a
-                            href="https://github.com/parulpal637/Spam-Message-Detector"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                            aria-label="Spam Detector GitHub">
-
-                            <i class="fa-brands fa-github"></i>
-
-                        </a>
-
-                    </div>
-
-                    <h3>Spam Message Detector</h3>
-
-                    <p>
-                        Machine Learning application that identifies
-                        whether a text message is spam or legitimate
-                        using NLP-based text classification.
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>Python</span>
-                        <span>Machine Learning</span>
-                        <span>NLP</span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- MUSIC -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            <i class="fa-solid fa-music"></i>
-                        </div>
-
-                        <a
-                            href="https://github.com/parulpal637/Emotion_based_music_recommendation_system"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                            aria-label="Music Recommendation GitHub">
-
-                            <i class="fa-brands fa-github"></i>
-
-                        </a>
-
-                    </div>
-
-                    <h3>
-                        Emotion-Based Music Recommendation System
-                    </h3>
-
-                    <p>
-                        AI-powered music recommendation application
-                        that connects user emotions with personalized
-                        music experiences.
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>AI</span>
-                        <span>Music Recommendation</span>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-                         EXPERIENCE
-        ================================================== -->
-
-        <section
-            class="section experience-section"
-            id="experience">
-
-            <div class="section-heading">
-
-                <span class="section-number">04.</span>
-
-                <h2>Experience & Contributions</h2>
-
-            </div>
-
-            <div class="timeline">
-
-
-                <!-- PRANOVATE -->
-
-                <div class="timeline-item">
-
-                    <div class="timeline-dot"></div>
-
-                    <div class="timeline-content">
-
-                        <span class="timeline-date">
-                            Dec 2025 — Jan 2026
-                        </span>
-
-                        <h3>
-                            AI/ML Intern
-                        </h3>
-
-                        <h4>
-                            Pranovate IT Solutions PVT LTD
-                        </h4>
-
-                        <p class="experience-location">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Remote
-                        </p>
-
-                        <p>
-                            Worked as an AI/ML Intern, gaining practical
-                            experience in Artificial Intelligence and
-                            Machine Learning in a remote professional
-                            environment.
-                        </p>
-
-                        <div class="timeline-tags">
-
-                            <span>AI/ML</span>
                             <span>Python</span>
                             <span>Machine Learning</span>
-                            <span>Remote</span>
-
-                        </div>
-
-
-                        <!-- CERTIFICATE -->
-
-                        <a
-                            href="./1000195488.png"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="certificate-btn">
-
-                            <i class="fa-solid fa-certificate"></i>
-
-                            View Internship Certificate
-
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- GSSOC -->
-
-                <div class="timeline-item">
-
-                    <div class="timeline-dot"></div>
-
-                    <div class="timeline-content">
-
-                        <span class="timeline-date">
-                            2026
-                        </span>
-
-                        <h3>
-                            GirlScript Summer of Code
-                        </h3>
-
-                        <h4>
-                            Contributor / Mentee — AI & Agents Track
-                        </h4>
-
-                        <p>
-                            Selected as a contributor and mentee in
-                            GSSoC 2026. Worked with open-source projects,
-                            GitHub workflows, issues and pull requests
-                            while gaining practical experience collaborating
-                            with developer communities.
-                        </p>
-
-                        <div class="timeline-tags">
-
-                            <span>Open Source</span>
-                            <span>GitHub</span>
-                            <span>AI</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- AI/ML LEARNING -->
-
-                <div class="timeline-item">
-
-                    <div class="timeline-dot"></div>
-
-                    <div class="timeline-content">
-
-                        <span class="timeline-date">
-                            2026 — Present
-                        </span>
-
-                        <h3>
-                            AI/ML Learning Journey
-                        </h3>
-
-                        <h4>
-                            Machine Learning & Development
-                        </h4>
-
-                        <p>
-                            Building practical AI/ML projects while
-                            strengthening Python, NLP, Machine Learning,
-                            Data Structures and algorithmic problem-solving
-                            skills.
-                        </p>
-
-                        <div class="timeline-tags">
-
-                            <span>Python</span>
-                            <span>ML</span>
                             <span>NLP</span>
-                            <span>DSA</span>
 
                         </div>
 
@@ -961,735 +175,1311 @@
         </section>
 
 
-        <!-- =================================================
-                       CERTIFICATIONS
-        ================================================== -->
+        <!-- =====================================================
+             ABOUT
+        ====================================================== -->
 
-        <section
-            class="section certifications-section"
-            id="certifications">
+        <section id="about" class="section">
 
-            <div class="section-heading">
+            <div class="container">
 
-                <span class="section-number">05.</span>
+                <div class="section-heading">
 
-                <h2>Certifications & Achievements</h2>
-
-            </div>
-
-            <p class="section-subtitle">
-                Professional certifications, internships,
-                learning achievements and job simulations.
-            </p>
-
-            <div class="certifications-grid">
-
-
-                <!-- PRANOVATE CERTIFICATE -->
-
-                <a
-                    class="cert-card featured-cert"
-                    href="./1000195488.png"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-
-                        <i class="fa-solid fa-briefcase"></i>
-
-                    </div>
-
-                    <div>
-
-                        <span class="cert-badge">
-                            Internship
-                        </span>
-
-                        <h3>
-                            AI/ML Intern
-                        </h3>
-
-                        <p>
-                            Pranovate IT Solutions PVT LTD
-                        </p>
-
-                        <span>
-                            Dec 2025 — Jan 2026
-                        </span>
-
-                        <small>
-                            Remote Internship
-                        </small>
-
-                        <strong class="cert-view">
-                            View Certificate →
-                        </strong>
-
-                    </div>
-
-                </a>
-
-
-                <!-- MICROSOFT AI SKILLS FEST -->
-
-                <a
-                    class="cert-card"
-                    href="https://www.credly.com/earner/earned/badge/445537b3-4cac-4709-890e-1f2d1048c6d3"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-brands fa-microsoft"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>AI Skills Fest 2026</h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued June 2026</span>
-
-                        <small>
-                            Credential ID:
-                            445537b3-4cac-4709-890e-1f2d1048c6d3
-                        </small>
-
-                    </div>
-
-                </a>
-
-
-                <!-- AINCAT -->
-
-                <a
-                    class="cert-card"
-                    href="https://www.naukri.com/campus/certificates/nc_ai_ncat_participation_may_2026/v0/6a1d9cab6039090ed2d1a1c8"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-certificate"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>AINCAT</h3>
-
-                        <p>Naukri.com</p>
-
-                        <span>Issued June 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- NLP -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/37573NBH?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-language"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Introduction to Natural Language
-                            Processing Concepts
-                        </h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued March 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- GENERATIVE AI -->
-
-                <a
-                    class="cert-card"
-                    href="https://www.skills.google/public_profiles/c838c789-6537-4c68-bc31-2fc6a1c5b044"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-cloud"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Introduction to Generative AI
-                        </h3>
-
-                        <p>Google Cloud</p>
-
-                        <span>Issued March 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- MACHINE LEARNING -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/UATTYJ73?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Introduction to Machine Learning
-                            Concepts
-                        </h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued March 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- EXPLORE GENERATIVE AI -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/Q5YCZBQE?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>Explore Generative AI</h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued March 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- AI BASICS -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/XE6GS55Y?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>Explore AI Basics</h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued February 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- COPILOT AGENTS -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/PGY9DXJ4?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-users-gear"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>Microsoft 365 Copilot Agents</h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued February 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- PREBUILT AGENTS -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/AKUJV9Q7?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-gears"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Explore Prebuilt Microsoft 365
-                            Copilot Agents
-                        </h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued February 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- AGENTS -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/HZT74RU8?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>Get Started with Agents</h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued February 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- COPILOT AI -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/UAD8RDD3?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-laptop-code"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Work Smarter with AI Using
-                            Microsoft Copilot
-                        </h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued February 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- COPILOT CHAT -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/ELNLFKGP?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-comments"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Microsoft 365 Copilot Chat
-                        </h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued February 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- DELOITTE DATA ANALYTICS -->
-
-                <a
-                    class="cert-card"
-                    href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_KYhyYSSyNr6Y3J9x2_1770270594472_completion_certificate.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Deloitte Australia -
-                            Data Analytics Job Simulation
-                        </h3>
-
-                        <p>Forage</p>
-
-                        <span>Issued February 2026</span>
-
-                        <small>
-                            Credential ID:
-                            Z8Ps43puDizYsH7Kv
-                        </small>
-
-                    </div>
-
-                </a>
-
-
-                <!-- MULTICLOUD -->
-
-                <div class="cert-card">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-cloud-arrow-up"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            2-Hour Multicloud Workshop
-                        </h3>
-
-                        <p>
-                            CoreXtech IT Services Pvt. Ltd.
-                        </p>
-
-                        <span>Issued November 2025</span>
-
-                        <small>
-                            Credential ID:
-                            CERT-25F0080E-1
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-                <!-- MULTICLOUD 2 -->
-
-                <div class="cert-card">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-cloud"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Multicloud 2-Hours Workshop
-                        </h3>
-
-                        <p>
-                            CoreXtech IT Services Pvt. Ltd.
-                        </p>
-
-                        <span>Issued November 2025</span>
-
-                        <small>
-                            Credential ID:
-                            CERT-3FABBA1D
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-                <!-- TATA CYBERSECURITY -->
-
-                <a
-                    class="cert-card"
-                    href="https://www.theforage.com/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Tata Group -
-                            Cybersecurity Analyst Job Simulation
-                        </h3>
-
-                        <p>Forage</p>
-
-                        <span>Issued June 2025</span>
-
-                        <small>
-                            Credential ID:
-                            Zp9qLmKNeggu8iqFK
-                        </small>
-
-                    </div>
-
-                </a>
-
-
-                <!-- DELOITTE CYBER -->
-
-                <a
-                    class="cert-card"
-                    href="https://www.theforage.com/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-user-shield"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Deloitte Australia -
-                            Cyber Job Simulation
-                        </h3>
-
-                        <p>Forage</p>
-
-                        <span>Issued June 2025</span>
-
-                        <small>
-                            Credential ID:
-                            rDodzi7jk8sKfbttx
-                        </small>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-                            GITHUB
-        ================================================== -->
-
-        <section class="github-section">
-
-            <div class="github-content">
-
-                <div>
-
-                    <span class="github-label">
-
-                        <i class="fa-brands fa-github"></i>
-
-                        Open Source
-
+                    <span class="section-label">
+                        About Me
                     </span>
 
                     <h2>
-                        Explore my work on GitHub
+                        Turning Ideas Into <span>Intelligent Solutions</span>
                     </h2>
-
-                    <p>
-                        Check out my projects, experiments,
-                        contributions and coding journey.
-                    </p>
 
                 </div>
 
-                <a
-                    href="https://github.com/parulpal637"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn github-btn">
 
-                    Visit GitHub
+                <div class="about-content">
 
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <div class="about-text">
 
-                </a>
+                        <p>
+                            I'm <strong>Parul Pal</strong>, a BCA student and
+                            aspiring AI/ML Engineer with a strong interest in
+                            Artificial Intelligence, Machine Learning,
+                            Natural Language Processing and software
+                            development.
+                        </p>
+
+                        <p>
+                            I enjoy creating practical projects that solve
+                            real-world problems. My projects range from
+                            sentiment analysis and spam detection to
+                            AI-powered plagiarism detection and financial
+                            intelligence applications.
+                        </p>
+
+                        <p>
+                            Currently, I'm focused on strengthening my
+                            programming, Machine Learning and Data Structures
+                            & Algorithms skills while building a strong
+                            portfolio for AI/ML opportunities.
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-stats">
+
+                        <div class="stat-card">
+
+                            <i class="fas fa-graduation-cap"></i>
+
+                            <h3>BCA</h3>
+
+                            <p>Computer Applications</p>
+
+                        </div>
+
+                        <div class="stat-card">
+
+                            <i class="fas fa-robot"></i>
+
+                            <h3>AI/ML</h3>
+
+                            <p>Primary Interest</p>
+
+                        </div>
+
+                        <div class="stat-card">
+
+                            <i class="fas fa-laptop-code"></i>
+
+                            <h3>Projects</h3>
+
+                            <p>Real-world Applications</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- =================================================
-                            CONTACT
-        ================================================== -->
+        <!-- =====================================================
+             SKILLS
+        ====================================================== -->
 
-        <section
-            class="section contact-section"
-            id="contact">
+        <section id="skills" class="section section-alt">
 
-            <div class="section-heading">
+            <div class="container">
 
-                <span class="section-number">06.</span>
+                <div class="section-heading">
 
-                <h2>Let's Connect</h2>
+                    <span class="section-label">
+                        My Skills
+                    </span>
 
-            </div>
-
-            <div class="contact-content">
-
-                <div class="contact-text">
-
-                    <h3>
-                        Looking for an AI/ML opportunity?
-                    </h3>
-
-                    <p>
-                        I'm actively looking for AI/ML internship
-                        opportunities where I can learn from experienced
-                        teams, contribute to real-world projects and
-                        grow as an AI/ML engineer.
-                    </p>
-
-                    <a
-                        href="./Resume -_Parul Pal.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn primary-btn resume-btn">
-
-                        <i class="fa-solid fa-file-pdf"></i>
-
-                        View My Resume
-
-                    </a>
+                    <h2>
+                        Technologies I <span>Work With</span>
+                    </h2>
 
                 </div>
 
 
-                <div class="contact-cards">
+                <div class="skills-grid">
 
+                    <!-- Programming -->
+                    <div class="skill-card">
 
-                    <!-- EMAIL -->
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
 
-                    <a
-                        href="mailto:eng.parul5418@gmail.com"
-                        class="contact-card">
+                        <h3>Programming</h3>
 
-                        <div class="contact-icon">
+                        <div class="skill-tags">
 
-                            <i class="fa-solid fa-envelope"></i>
+                            <span>Python</span>
+                            <span>C</span>
+                            <span>C++</span>
 
                         </div>
 
-                        <div>
+                    </div>
 
-                            <span>Email</span>
 
-                            <strong>
-                                eng.parul5418@gmail.com
-                            </strong>
+                    <!-- AI / ML -->
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+
+                        <h3>AI / Machine Learning</h3>
+
+                        <div class="skill-tags">
+
+                            <span>Machine Learning</span>
+                            <span>NLP</span>
+                            <span>Scikit-learn</span>
+                            <span>TF-IDF</span>
 
                         </div>
 
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                    </a>
+                    </div>
 
 
-                    <!-- LINKEDIN -->
+                    <!-- Data -->
+                    <div class="skill-card">
 
-                    <a
-                        href="https://www.linkedin.com/in/parul-pal-93a417349/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="contact-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
 
-                        <div class="contact-icon">
+                        <h3>Data & Analytics</h3>
 
-                            <i class="fa-brands fa-linkedin-in"></i>
+                        <div class="skill-tags">
+
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                            <span>Data Analysis</span>
 
                         </div>
 
-                        <div>
+                    </div>
 
-                            <span>LinkedIn</span>
 
-                            <strong>
-                                Connect with me
-                            </strong>
+                    <!-- Web -->
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+
+                        <h3>Web Development</h3>
+
+                        <div class="skill-tags">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Flask</span>
+                            <span>Streamlit</span>
 
                         </div>
 
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                    </a>
+                    </div>
 
 
-                    <!-- GITHUB -->
+                    <!-- Tools -->
+                    <div class="skill-card">
 
-                    <a
-                        href="https://github.com/parulpal637"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="contact-card">
-
-                        <div class="contact-icon">
-
-                            <i class="fa-brands fa-github"></i>
-
+                        <div class="skill-icon">
+                            <i class="fas fa-tools"></i>
                         </div>
 
-                        <div>
+                        <h3>Tools</h3>
 
+                        <div class="skill-tags">
+
+                            <span>Git</span>
                             <span>GitHub</span>
-
-                            <strong>
-                                parulpal637
-                            </strong>
+                            <span>VS Code</span>
 
                         </div>
 
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+
+                    <!-- Core -->
+                    <div class="skill-card">
+
+                        <div class="skill-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+
+                        <h3>Core Concepts</h3>
+
+                        <div class="skill-tags">
+
+                            <span>DSA</span>
+                            <span>OOP</span>
+                            <span>DBMS</span>
+                            <span>Problem Solving</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROJECTS
+        ====================================================== -->
+
+        <section id="projects" class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        My Work
+                    </span>
+
+                    <h2>
+                        Featured <span>Projects</span>
+                    </h2>
+
+                    <p>
+                        Some of the AI/ML and software development projects
+                        I've worked on.
+                    </p>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <!-- =================================================
+                         PROJECT 1 - CASHGUARD AI
+                    ================================================== -->
+
+                    <article class="project-card">
+
+                        <div class="project-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                AI / FinTech
+                            </span>
+
+                            <h3>
+                                CashGuard AI
+                            </h3>
+
+                            <p>
+                                An intelligent invoice management and payment
+                                recommendation system designed to help
+                                businesses protect early-payment discounts
+                                and identify potential savings.
+                            </p>
+
+                            <div class="project-tech">
+
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>AI</span>
+                                <span>SQLite</span>
+
+                            </div>
+
+                            <a href="https://github.com/parulpal637/CashGuard-AI"
+                                class="project-link"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                                <i class="fas fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PROJECT 2 - VEHLINE
+                    ================================================== -->
+
+                    <article class="project-card">
+
+                        <div class="project-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                Web Application
+                            </span>
+
+                            <h3>
+                                Vehline
+                            </h3>
+
+                            <p>
+                                A used-car marketplace web application where
+                                users can explore vehicles and manage
+                                listings through a modern web interface.
+                            </p>
+
+                            <div class="project-tech">
+
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>PostgreSQL</span>
+                                <span>HTML/CSS</span>
+
+                            </div>
+
+                            <a href="https://github.com/parulpal637/Vehline"
+                                class="project-link"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                                <i class="fas fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PROJECT 3 - PLAGIARISM
+                    ================================================== -->
+
+                    <article class="project-card">
+
+                        <div class="project-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                NLP / Machine Learning
+                            </span>
+
+                            <h3>
+                                AI-Based Plagiarism Detection System
+                            </h3>
+
+                            <p>
+                                An NLP-based plagiarism detection system that
+                                compares text documents using TF-IDF and
+                                cosine similarity to identify similarity.
+                            </p>
+
+                            <div class="project-tech">
+
+                                <span>Python</span>
+                                <span>NLP</span>
+                                <span>TF-IDF</span>
+                                <span>Streamlit</span>
+
+                            </div>
+
+                            <a href="https://github.com/parulpal637/AI-Based-Plagiarism-Detection-System-using-NLP-LLMs"
+                                class="project-link"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                                <i class="fas fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PROJECT 4 - SENTIMENT ANALYSIS
+                    ================================================== -->
+
+                    <article class="project-card">
+
+                        <div class="project-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                NLP / Machine Learning
+                            </span>
+
+                            <h3>
+                                Sentiment Analysis ML
+                            </h3>
+
+                            <p>
+                                A Machine Learning project that analyzes text
+                                sentiment using CountVectorizer and Logistic
+                                Regression to classify user opinions.
+                            </p>
+
+                            <div class="project-tech">
+
+                                <span>Python</span>
+                                <span>Scikit-learn</span>
+                                <span>NLP</span>
+                                <span>Logistic Regression</span>
+
+                            </div>
+
+                            <a href="https://github.com/parulpal637/Sentiment-Analysis-ML"
+                                class="project-link"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                                <i class="fas fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PROJECT 5 - SPAM MESSAGE DETECTOR
+                    ================================================== -->
+
+                    <article class="project-card">
+
+                        <div class="project-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                Machine Learning
+                            </span>
+
+                            <h3>
+                                Spam Message Detector
+                            </h3>
+
+                            <p>
+                                A Machine Learning application that detects
+                                whether a message is spam or legitimate using
+                                text classification techniques.
+                            </p>
+
+                            <div class="project-tech">
+
+                                <span>Python</span>
+                                <span>Machine Learning</span>
+                                <span>NLP</span>
+                                <span>Scikit-learn</span>
+
+                            </div>
+
+                            <a href="https://github.com/parulpal637/Spam-Message-Detector"
+                                class="project-link"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                                <i class="fas fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PROJECT 6 - EMOTION SPOTIFY
+                    ================================================== -->
+
+                    <article class="project-card">
+
+                        <div class="project-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+
+                        <div class="project-content">
+
+                            <span class="project-category">
+                                AI / Music
+                            </span>
+
+                            <h3>
+                                Emotion-Based Spotify Player
+                            </h3>
+
+                            <p>
+                                An AI-powered music application that connects
+                                user emotions with personalized music
+                                recommendations through an interactive
+                                interface.
+                            </p>
+
+                            <div class="project-tech">
+
+                                <span>Python</span>
+                                <span>Flask</span>
+                                <span>AI</span>
+                                <span>Spotify</span>
+
+                            </div>
+
+                            <a href="https://github.com/parulpal637/Emotion_based_music_recommendation_system"
+                                class="project-link"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <i class="fab fa-github"></i>
+                                View on GitHub
+                                <i class="fas fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EXPERIENCE
+        ====================================================== -->
+
+        <section id="experience" class="section section-alt">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        Experience
+                    </span>
+
+                    <h2>
+                        My <span>Experience</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="timeline">
+
+
+                    <!-- Pranovate -->
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <span class="timeline-date">
+                                2026
+                            </span>
+
+                            <h3>
+                                AI/ML Intern
+                            </h3>
+
+                            <h4>
+                                Pranovate
+                            </h4>
+
+                            <p>
+                                Worked on Artificial Intelligence and Machine
+                                Learning related tasks, gaining practical
+                                experience in developing and applying
+                                AI/ML concepts.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- GSSoC -->
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <span class="timeline-date">
+                                2026
+                            </span>
+
+                            <h3>
+                                Open Source Contributor
+                            </h3>
+
+                            <h4>
+                                GirlScript Summer of Code
+                            </h4>
+
+                            <p>
+                                Contributed to open-source projects as part of
+                                the AI/Agents track, collaborating through
+                                GitHub and learning open-source development
+                                workflows.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CERTIFICATIONS
+        ====================================================== -->
+
+        <section id="certifications" class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        Certifications
+                    </span>
+
+                    <h2>
+                        Learning & <span>Achievements</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="certifications-grid">
+
+
+                    <!-- 1 -->
+
+                    <a href="./1000195488.png"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                AI/ML Internship
+                            </h3>
+
+                            <p>
+                                Pranovate
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 2 -->
+
+                    <a href="https://www.credly.com/earner/earned/badge/445537b3-4cac-4709-890e-1f2d1048c6d3"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Microsoft AI Skills Fest 2026
+                            </h3>
+
+                            <p>
+                                Microsoft
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 3 -->
+
+                    <a href="https://www.naukri.com/campus/certificates/nc_ai_ncat_participation_may_2026/v0/6a1d9cab6039090ed2d1a1c8"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                AINCAT
+                            </h3>
+
+                            <p>
+                                Naukri Campus
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 4 -->
+
+                    <a href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/37573NBH?sharingId=E8363FA626F90F7E"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Introduction to NLP
+                            </h3>
+
+                            <p>
+                                Microsoft
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 5 -->
+
+                    <a href="https://www.skills.google/public_profiles/c838c789-6537-4c68-bc31-2fc6a1c5b044"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Introduction to Generative AI
+                            </h3>
+
+                            <p>
+                                Google Cloud
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 6 -->
+
+                    <a href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/UATTYJ73?sharingId=E8363FA626F90F7E"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Machine Learning
+                            </h3>
+
+                            <p>
+                                Microsoft
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 7 -->
+
+                    <a href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/Q5YCZBQE?sharingId=E8363FA626F90F7E"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-wand-magic-sparkles"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Explore Generative AI
+                            </h3>
+
+                            <p>
+                                Microsoft
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 8 -->
+
+                    <a href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/XE6GS55Y?sharingId=E8363FA626F90F7E"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Explore AI Basics
+                            </h3>
+
+                            <p>
+                                Microsoft
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 9 -->
+
+                    <a href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/PGY9DXJ4?sharingId=E8363FA626F90F7E"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Microsoft 365 Copilot Agents
+                            </h3>
+
+                            <p>
+                                Microsoft
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 10 -->
+
+                    <a href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/AKUJV9Q7?sharingId=E8363FA626F90F7E"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Explore Prebuilt Microsoft 365 Copilot Agents
+                            </h3>
+
+                            <p>
+                                Microsoft
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 11 -->
+
+                    <a href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/HZT74RU8?sharingId=E8363FA626F90F7E"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Get Started with Agents
+                            </h3>
+
+                            <p>
+                                Microsoft
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 12 -->
+
+                    <a href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/UAD8RDD3?sharingId=E8363FA626F90F7E"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Work Smarter with AI Using Microsoft Copilot
+                            </h3>
+
+                            <p>
+                                Microsoft
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 13 -->
+
+                    <a href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/ELNLFKGP?sharingId=E8363FA626F90F7E"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Microsoft 365 Copilot Chat
+                            </h3>
+
+                            <p>
+                                Microsoft
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 14 -->
+
+                    <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_KYhyYSSyNr6Y3J9x2_1770270594472_completion_certificate.pdf"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Data Analytics Job Simulation
+                            </h3>
+
+                            <p>
+                                Deloitte Australia – Forage
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 15 -->
+
+                    <div class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                2-Hour Multicloud Workshop
+                            </h3>
+
+                            <p>
+                                CoreXtech
+                            </p>
+
+                            <small>
+                                Credential ID: CERT-25F0080E-1
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 16 -->
+
+                    <div class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Multicloud 2-Hours Workshop
+                            </h3>
+
+                            <p>
+                                CoreXtech • Nov 2025
+                            </p>
+
+                            <small>
+                                Credential ID: CERT-3FABBA1D
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 17 -->
+
+                    <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_KYhyYSSyNr6Y3J9x2_1749895131212_completion_certificate.pdf"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Cybersecurity Analyst Job Simulation
+                            </h3>
+
+                            <p>
+                                Tata Group – Forage
+                            </p>
+
+                            <small>
+                                Credential ID: Zp9qLmKNeggu8iqFK
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 18 -->
+
+                    <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_KYhyYSSyNr6Y3J9x2_1749230694237_completion_certificate.pdf"
+                        target="_blank"
+                        class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Cyber Job Simulation
+                            </h3>
+
+                            <p>
+                                Deloitte Australia – Forage
+                            </p>
+
+                            <small>
+                                Credential ID: rDodzi7jk8sKfbttx
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- 19 -->
+
+                    <div class="certificate-card">
+
+                        <div class="certificate-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Automation Testing Skills
+                            </h3>
+
+                            <p>
+                                HCL GUVI
+                            </p>
+
+                            <small>
+                                Credential ID: N610mR2uW66739nz56
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+        <section id="contact" class="section section-alt">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        Get In Touch
+                    </span>
+
+                    <h2>
+                        Let's <span>Connect</span>
+                    </h2>
+
+                    <p>
+                        I'm always open to discussing AI/ML opportunities,
+                        projects, collaborations and learning experiences.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-grid">
+
+
+                    <!-- LinkedIn -->
+
+                    <a href="https://www.linkedin.com/in/parul-pal-93a417349/"
+                        target="_blank"
+                        class="contact-card">
+
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>LinkedIn</h3>
+
+                            <p>
+                                Connect with me
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <!-- GitHub -->
+
+                    <a href="https://github.com/parulpal637"
+                        target="_blank"
+                        class="contact-card">
+
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>GitHub</h3>
+
+                            <p>
+                                Explore my projects
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <!-- Portfolio -->
+
+                    <a href="https://parul-portfolio-kappa.vercel.app/"
+                        target="_blank"
+                        class="contact-card">
+
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>Portfolio</h3>
+
+                            <p>
+                                Visit my website
+                            </p>
+
+                        </div>
+
+                        <i class="fas fa-arrow-right"></i>
 
                     </a>
 
@@ -1703,82 +1493,77 @@
 
 
     <!-- =====================================================
-                            FOOTER
+         FOOTER
     ====================================================== -->
 
-    <footer>
+    <footer class="footer">
 
-        <div class="footer-content">
+        <div class="container">
 
-            <a href="#home" class="logo">
+            <div class="footer-content">
 
-                <span>&lt;</span>
-                Parul
-                <span>/&gt;</span>
+                <div class="footer-logo">
+                    Parul <span>Pal</span>
+                </div>
 
-            </a>
+                <p>
+                    Aspiring AI/ML Engineer • BCA Student
+                </p>
 
-            <p>
-                Designed & built by Parul Pal
-            </p>
+                <div class="footer-socials">
 
-            <div class="footer-socials">
+                    <a href="https://github.com/parulpal637"
+                        target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
 
-                <a
-                    href="https://github.com/parulpal637"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub">
+                    <a href="https://www.linkedin.com/in/parul-pal-93a417349/"
+                        target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
 
-                    <i class="fa-brands fa-github"></i>
+                    <a href="https://leetcode.com/u/Parulpal637/"
+                        target="_blank">
+                        <i class="fas fa-code"></i>
+                    </a>
 
-                </a>
+                </div>
 
-                <a
-                    href="https://www.linkedin.com/in/parul-pal-93a417349/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn">
+            </div>
 
-                    <i class="fa-brands fa-linkedin-in"></i>
 
-                </a>
+            <div class="footer-bottom">
 
-                <a
-                    href="mailto:eng.parul5418@gmail.com"
-                    aria-label="Email">
+                <p>
+                    © 2026 Parul Pal. All Rights Reserved.
+                </p>
 
-                    <i class="fa-solid fa-envelope"></i>
-
-                </a>
+                <p>
+                    Built with ❤️ & Python
+                </p>
 
             </div>
 
         </div>
 
-        <p class="copyright">
-            © 2026 Parul Pal. All rights reserved.
-        </p>
-
     </footer>
 
 
     <!-- =====================================================
-                         SCROLL TOP
+         SCROLL TO TOP
     ====================================================== -->
 
-    <button
-        id="scrollTop"
+    <button id="scrollTop"
         class="scroll-top"
         aria-label="Scroll to top">
 
-        <i class="fa-solid fa-arrow-up"></i>
+        <i class="fas fa-arrow-up"></i>
 
     </button>
 
 
     <!-- =====================================================
-                         JAVASCRIPT
+         JAVASCRIPT
     ====================================================== -->
 
     <script src="script.js"></script>
