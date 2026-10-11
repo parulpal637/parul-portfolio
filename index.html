@@ -1,1788 +1,1493 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="description" content="Parul Pal's portfolio — Python developer, AI/ML enthusiast, and software developer.">
+  <title>Parul Pal | Python Developer & AI/ML</title>
 
-    <meta name="description"
-        content="Parul Pal - AI/ML Developer Portfolio. Explore my projects, skills, internship experience, open-source contributions and certifications.">
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --surface: #121620;
+      --surface-2: #171c28;
+      --text: #f4f5f8;
+      --muted: #a7afc0;
+      --accent: #a78bfa;
+      --accent-2: #67e8f9;
+      --border: rgba(255,255,255,.10);
+      --radius: 18px;
+      --max-width: 1120px;
+    }
 
-    <meta name="keywords"
-        content="Parul Pal, AI ML Developer, Machine Learning, Artificial Intelligence, Python, NLP, BCA, AI ML Internship">
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <meta name="author" content="Parul Pal">
-    <meta name="theme-color" content="#0b0f19">
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
 
-    <title>Parul Pal | AI/ML Developer</title>
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.7;
+    }
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
-        rel="stylesheet">
+    img {
+      max-width: 100%;
+    }
 
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    .container {
+      width: min(90%, var(--max-width));
+      margin: auto;
+    }
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css">
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-alt {
+      background: #0f121a;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,13,18,.92);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    .navbar {
+      min-height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .logo span,
+    .accent-text {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: .91rem;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 7px 12px;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 85% 30%, rgba(139,92,246,.12), transparent 36%),
+        radial-gradient(ellipse at 5% 90%, rgba(103,232,249,.06), transparent 32%);
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .eyebrow {
+      color: var(--accent-2);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1.08;
+      letter-spacing: -3px;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.2rem, 2.5vw, 1.75rem);
+      margin-bottom: 20px;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons,
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 19px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: .92rem;
+      transition: transform .2s, background .2s;
+      text-align: center;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #130d24;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+    }
+
+    .social-links {
+      margin-top: 25px;
+      gap: 22px;
+    }
+
+    .social-links a {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .social-links a:hover {
+      color: var(--accent-2);
+    }
+
+    /* Profile image */
+    .hero-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 0;
+    }
+
+    .profile-image-frame {
+      width: min(320px, 78vw);
+      height: min(320px, 78vw);
+      padding: 6px;
+      flex-shrink: 0;
+      overflow: hidden;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      background: linear-gradient(
+        135deg,
+        rgba(167,139,250,.25),
+        rgba(103,232,249,.12)
+      );
+      box-shadow:
+        0 0 35px rgba(139,92,246,.16),
+        0 0 65px rgba(34,211,238,.08);
+    }
+
+    .profile-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      object-fit: cover;
+      object-position: center 18%;
+      border-radius: 50%;
+      background: var(--surface-2);
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.2;
+      margin-bottom: 15px;
+      letter-spacing: -1px;
+    }
+
+    .section-heading > p:not(.eyebrow) {
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .about-details,
+    .skills-grid,
+    .projects-grid,
+    .education-grid,
+    .achievements-grid,
+    .certifications-grid,
+    .contact-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .about-details {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .detail-card,
+    .skill-card,
+    .project-card,
+    .education-card,
+    .achievement-card,
+    .certification-card,
+    .contact-card,
+    .timeline-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 23px;
+    }
+
+    .detail-label {
+      color: var(--accent-2);
+      font-size: .78rem;
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .detail-card h3 {
+      font-size: .98rem;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .skill-card h3,
+    .project-card h3,
+    .education-card h3,
+    .achievement-card h3,
+    .certification-card h3,
+    .contact-card h3 {
+      margin-bottom: 14px;
+      font-size: 1.15rem;
+    }
+
+    .skill-tags,
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tags span,
+    .project-tech span {
+      padding: 5px 10px;
+      font-size: .79rem;
+      border-radius: 7px;
+      background: rgba(167,139,250,.10);
+      border: 1px solid rgba(167,139,250,.18);
+      color: #d6caff;
+    }
+
+    .projects-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(167,139,250,.5);
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .project-category {
+      color: var(--accent-2);
+      font-size: .76rem;
+      font-weight: 700;
+    }
+
+    .project-icon {
+      color: var(--accent);
+      font-size: 1.5rem;
+    }
+
+    .project-card > p {
+      color: var(--muted);
+      font-size: .94rem;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .project-tech {
+      margin-bottom: 22px;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      padding-top: 15px;
+      border-top: 1px solid var(--border);
+    }
+
+    .project-links a {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: .9rem;
+    }
+
+    .project-links a:hover {
+      color: var(--accent-2);
+    }
+
+    .projects-footer {
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    .timeline {
+      max-width: 820px;
+      margin: auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .timeline-date {
+      color: var(--accent-2);
+      font-size: .82rem;
+      font-weight: 700;
+    }
+
+    .timeline-item h3 {
+      margin-top: 8px;
+    }
+
+    .timeline-item h4 {
+      color: var(--accent);
+      font-weight: 600;
+      margin: 3px 0 12px;
+    }
+
+    .timeline-item p,
+    .education-card p,
+    .achievement-card p,
+    .certification-card p,
+    .contact-card p {
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    .education-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .education-card h3 {
+      font-size: 1.05rem;
+    }
+
+    .education-card p {
+      margin-top: 7px;
+    }
+
+    .achievements-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .achievement-icon,
+    .contact-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      color: var(--accent);
+      font-size: 1.6rem;
+    }
+
+    .certifications-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Clickable certificate cards */
+    .certification-card {
+      display: block;
+      color: var(--text);
+      text-decoration: none;
+      transition: transform .2s, border-color .2s;
+      overflow-wrap: anywhere;
+    }
+
+    .certification-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .certification-card h3 {
+      margin-bottom: 9px;
+      font-size: 1.05rem;
+    }
+
+    .certification-card p {
+      margin-bottom: 5px;
+      font-size: .88rem;
+    }
+
+    .cert-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--accent-2);
+      font-weight: 700;
+      font-size: .88rem;
+    }
+
+    .section-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: .82rem;
+      margin-top: 20px;
+    }
+
+    .contact-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-card {
+      display: block;
+      transition: transform .2s, border-color .2s;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .contact-card h3 {
+      margin-bottom: 5px;
+    }
+
+    .footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .footer p {
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    @media (max-width: 850px) {
+      .nav-links {
+        gap: 13px;
+      }
+
+      .hero-content {
+        gap: 30px;
+      }
+
+      .profile-image-frame {
+        width: 260px;
+        height: 260px;
+      }
+
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .section {
+        padding: 68px 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .navbar {
+        flex-wrap: wrap;
+        padding: 13px 0;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding: 12px 0 8px;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 10px 0;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-image {
+        grid-row: 1;
+      }
+
+      .profile-image-frame {
+        width: 215px;
+        height: 215px;
+      }
+
+      h1 {
+        font-size: 3.2rem;
+        letter-spacing: -2px;
+      }
+
+      .hero-buttons,
+      .social-links {
+        justify-content: center;
+      }
+
+      .about-grid,
+      .about-details,
+      .skills-grid,
+      .projects-grid,
+      .achievements-grid,
+      .certifications-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        margin-bottom: 32px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 2.7rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <!-- =====================================================
-                            NAVBAR
-    ====================================================== -->
+  <!-- NAVIGATION -->
+  <header class="header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a href="#home" class="logo">Parul<span>.</span></a>
 
-    <header class="navbar">
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="nav-links">
+        ☰
+      </button>
 
-        <div class="nav-container">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <a href="#home" class="logo">
-                <span>&lt;</span>Parul<span>/&gt;</span>
+  <main>
+
+    <!-- HERO -->
+    <section class="hero section" id="home">
+      <div class="container hero-content">
+
+        <div class="hero-text">
+          <p class="eyebrow">HELLO, I'M</p>
+          <h1>Parul Pal</h1>
+
+          <h2>
+            Python Developer
+            <span class="accent-text">| AI/ML Enthusiast</span>
+          </h2>
+
+          <p class="hero-description">
+            I build practical software solutions using Python, machine
+            learning, NLP, and web technologies. I enjoy turning ideas into
+            useful, user-focused projects and continuously improving my
+            engineering skills.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              Explore My Projects
             </a>
 
-            <nav class="nav-menu" id="navMenu">
+            <a href="ParulPal_Resume.pdf"
+               class="btn btn-secondary"
+               target="_blank"
+               rel="noopener noreferrer">
+              View Resume ↗
+            </a>
 
-                <a href="#home" class="nav-link active">Home</a>
+            <a href="ParulPal_Resume.pdf"
+               class="btn btn-secondary"
+               download>
+              Download Resume ↓
+            </a>
 
-                <a href="#about" class="nav-link">About</a>
+            <a href="https://github.com/parulpal637"
+               class="btn btn-secondary"
+               target="_blank"
+               rel="noopener noreferrer">
+              GitHub Profile ↗
+            </a>
+          </div>
 
-                <a href="#skills" class="nav-link">Skills</a>
+          <div class="social-links">
+            <a href="https://github.com/parulpal637"
+               target="_blank" rel="noopener noreferrer">GitHub</a>
 
-                <a href="#projects" class="nav-link">Projects</a>
+            <a href="https://www.linkedin.com/in/parul-pal-93a417349/"
+               target="_blank" rel="noopener noreferrer">LinkedIn</a>
 
-                <a href="#experience" class="nav-link">Experience</a>
-
-                <a href="#certifications" class="nav-link">
-                    Certifications
-                </a>
-
-                <a href="#contact" class="nav-link">Contact</a>
-
-            </nav>
-
-            <div class="nav-actions">
-
-                <button
-                    class="theme-btn"
-                    id="themeBtn"
-                    aria-label="Toggle theme">
-
-                    <i class="fa-solid fa-moon"></i>
-
-                </button>
-
-                <button
-                    class="menu-btn"
-                    id="menuBtn"
-                    aria-label="Open menu">
-
-                    <i class="fa-solid fa-bars"></i>
-
-                </button>
-
-            </div>
-
+            <a href="https://leetcode.com/u/Parulpal637/"
+               target="_blank" rel="noopener noreferrer">LeetCode</a>
+          </div>
         </div>
 
-    </header>
-
-
-    <!-- =====================================================
-                              MAIN
-    ====================================================== -->
-
-    <main>
-
-        <!-- =================================================
-                              HERO
-        ================================================== -->
-
-        <section class="hero" id="home">
-
-            <div class="hero-grid"></div>
-
-            <div class="hero-content">
-
-                <div class="availability">
-
-                    <span class="status-dot"></span>
-
-                    Available for AI/ML Internships
-
-                </div>
-
-                <p class="hero-intro">
-                    Hello, I'm
-                </p>
-
-                <h1>
-                    Parul <span>Pal</span>
-                </h1>
-
-                <h2>
-                    AI/ML
-                    <span class="typing-text"></span>
-                </h2>
-
-                <p class="hero-description">
-                    BCA student passionate about Artificial Intelligence,
-                    Machine Learning and building practical technology
-                    that solves real-world problems.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="#projects"
-                        class="btn primary-btn">
-
-                        View My Projects
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-                    <a
-                        href="./Resume -_Parul Pal.pdf"
-                        class="btn secondary-btn"
-                        target="_blank"
-                        rel="noopener noreferrer">
-
-                        View Resume
-
-                        <i class="fa-solid fa-file-lines"></i>
-
-                    </a>
-
-                </div>
-
-
-                <!-- SOCIAL LINKS -->
-
-                <div class="social-links">
-
-                    <a
-                        href="https://github.com/parulpal637"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="GitHub">
-
-                        <i class="fa-brands fa-github"></i>
-
-                    </a>
-
-                    <a
-                        href="https://www.linkedin.com/in/parul-pal-93a417349/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="LinkedIn">
-
-                        <i class="fa-brands fa-linkedin-in"></i>
-
-                    </a>
-
-                    <a
-                        href="mailto:eng.parul5418@gmail.com"
-                        aria-label="Email">
-
-                        <i class="fa-solid fa-envelope"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- HERO VISUAL -->
-
-            <div class="hero-visual">
-
-                <div class="orbit orbit-one"></div>
-
-                <div class="orbit orbit-two"></div>
-
-                <div class="ai-card">
-
-                    <div class="ai-card-top">
-
-                        <span class="window-dot red"></span>
-                        <span class="window-dot yellow"></span>
-                        <span class="window-dot green"></span>
-
-                    </div>
-
-                    <div class="code-content">
-
-                        <p>
-                            <span class="purple">class</span>
-                            <span class="blue">AIEngineer</span>:
-                        </p>
-
-                        <p class="indent">
-                            <span class="purple">def</span>
-                            <span class="green">build</span>(self):
-                        </p>
-
-                        <p class="double-indent">
-                            projects = [
-                        </p>
-
-                        <p class="triple-indent">
-                            <span class="orange">
-                                "Vehline",
-                            </span>
-                        </p>
-
-                        <p class="triple-indent">
-                            <span class="orange">
-                                "NLP",
-                            </span>
-                        </p>
-
-                        <p class="triple-indent">
-                            <span class="orange">
-                                "Machine Learning"
-                            </span>
-                        </p>
-
-                        <p class="double-indent">
-                            ]
-                        </p>
-
-                        <p class="indent">
-
-                            <span class="purple">return</span>
-
-                            projects
-
-                        </p>
-
-                    </div>
-
-                    <div class="ai-symbol">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-                              ABOUT
-        ================================================== -->
-
-        <section class="section about-section" id="about">
-
-            <div class="section-heading">
-
-                <span class="section-number">01.</span>
-
-                <h2>About Me</h2>
-
-            </div>
-
-            <div class="about-grid">
-
-                <div class="about-text">
-
-                    <p>
-                        I'm <strong>Parul Pal</strong>, a BCA student at
-                        Hi-Tech Institute of Engineering & Technology,
-                        passionate about Artificial Intelligence and
-                        Machine Learning.
-                    </p>
-
-                    <p>
-                        I enjoy transforming ideas into practical
-                        applications using Python, Machine Learning,
-                        NLP and web technologies.
-                    </p>
-
-                    <p>
-                        My goal is to become an AI/ML Engineer and work
-                        on products that solve meaningful real-world
-                        problems.
-                    </p>
-
-                    <p>
-                        Currently, I'm strengthening my foundations in
-                        Machine Learning, Data Structures and Algorithms
-                        while continuously building projects and
-                        contributing to open-source communities.
-                    </p>
-
-                    <div class="about-stats">
-
-                        <div class="stat">
-                            <strong>2027</strong>
-                            <span>Graduation</span>
-                        </div>
-
-                        <div class="stat">
-                            <strong>AI/ML</strong>
-                            <span>Career Focus</span>
-                        </div>
-
-                        <div class="stat">
-                            <strong>GSSoC</strong>
-                            <span>Contributor</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="about-card">
-
-                    <div class="terminal-header">
-
-                        <span></span>
-                        <span></span>
-                        <span></span>
-
-                    </div>
-
-                    <div class="terminal-body">
-
-                        <p>
-                            <span class="terminal-purple">const</span>
-                            developer = {
-                        </p>
-
-                        <p class="terminal-indent">
-                            name:
-                            <span>"Parul Pal"</span>,
-                        </p>
-
-                        <p class="terminal-indent">
-                            role:
-                            <span>"AI/ML Developer"</span>,
-                        </p>
-
-                        <p class="terminal-indent">
-                            education:
-                            <span>"BCA"</span>,
-                        </p>
-
-                        <p class="terminal-indent">
-                            focus:
-                            <span>"Artificial Intelligence"</span>,
-                        </p>
-
-                        <p class="terminal-indent">
-                            passion:
-                            <span>"Building AI"</span>,
-                        </p>
-
-                        <p class="terminal-indent">
-                            learning:
-                            <span>"Every Day"</span>
-                        </p>
-
-                        <p>
-                            };
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-                              SKILLS
-        ================================================== -->
-
-        <section class="section skills-section" id="skills">
-
-            <div class="section-heading">
-
-                <span class="section-number">02.</span>
-
-                <h2>Skills</h2>
-
-            </div>
-
-            <p class="section-subtitle">
-                Technologies and tools I'm currently working with.
-            </p>
-
-            <div class="skills-grid">
-
-                <!-- PROGRAMMING -->
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-python"></i>
-                    </div>
-
-                    <h3>Programming</h3>
-
-                    <div class="skill-tags">
-
-                        <span>Python</span>
-                        <span>C++</span>
-                        <span>C</span>
-                        <span>JavaScript</span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- AI / ML -->
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-
-                    <h3>AI & Machine Learning</h3>
-
-                    <div class="skill-tags">
-
-                        <span>Machine Learning</span>
-                        <span>NLP</span>
-                        <span>Scikit-learn</span>
-                        <span>TF-IDF</span>
-                        <span>LLMs</span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- WEB -->
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="fa-solid fa-code"></i>
-                    </div>
-
-                    <h3>Web Development</h3>
-
-                    <div class="skill-tags">
-
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Flask</span>
-                        <span>Streamlit</span>
-
-                    </div>
-
-                </div>
-
-
-                <!-- TOOLS -->
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        <i class="fa-brands fa-github"></i>
-                    </div>
-
-                    <h3>Tools & Platforms</h3>
-
-                    <div class="skill-tags">
-
-                        <span>Git</span>
-                        <span>GitHub</span>
-                        <span>VS Code</span>
-                        <span>Jupyter</span>
-                        <span>Pandas</span>
-                        <span>NumPy</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-                            PROJECTS
-        ================================================== -->
-
-        <section class="section projects-section" id="projects">
-
-            <div class="section-heading">
-
-                <span class="section-number">03.</span>
-
-                <h2>Featured Projects</h2>
-
-            </div>
-
-            <p class="section-subtitle">
-                Some of the projects I've built while learning and
-                experimenting with AI, ML and web development.
-            </p>
-
-            <div class="projects-grid">
-
-
-                <!-- VEHLINE -->
-
-                <article class="project-card featured-project">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            <i class="fa-solid fa-car"></i>
-                        </div>
-
-                        <span class="featured-label">
-                            Featured Project
-                        </span>
-
-                        <a
-                            href="https://github.com/parulpal637"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                            aria-label="Vehline GitHub">
-
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                        </a>
-
-                    </div>
-
-                    <h3>Vehline</h3>
-
-                    <p>
-                        A modern used-car marketplace concept designed
-                        to make buying and selling vehicles safer and
-                        more structured.
-                    </p>
-
-                    <p>
-                        The platform focuses on privacy, secure
-                        communication, bidding and transaction-based
-                        monetization.
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>Web Development</span>
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>Flask</span>
-                        <span>Startup</span>
-
-                    </div>
-
-                    <div class="project-footer">
-
-                        <span>
-                            <i class="fa-solid fa-star"></i>
-                            Startup Project
-                        </span>
-
-                        <a
-                            href="https://github.com/parulpal637"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="view-project">
-
-                            View Project →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- AI PLAGIARISM -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            <i class="fa-solid fa-file-shield"></i>
-                        </div>
-
-                        <a
-                            href="https://github.com/parulpal637/AI-Based-Plagiarism-Detection-System-using-NLP-LLMs"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                            aria-label="AI Plagiarism GitHub">
-
-                            <i class="fa-brands fa-github"></i>
-
-                        </a>
-
-                    </div>
-
-                    <h3>AI Plagiarism Detection</h3>
-
-                    <p>
-                        NLP-based plagiarism detection system that
-                        compares documents using TF-IDF vectorization
-                        and cosine similarity.
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>Python</span>
-                        <span>NLP</span>
-                        <span>TF-IDF</span>
-                        <span>Cosine Similarity</span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- SENTIMENT ANALYSIS -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            <i class="fa-solid fa-face-smile"></i>
-                        </div>
-
-                        <a
-                            href="https://github.com/parulpal637/Sentiment-Analysis-ML"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                            aria-label="Sentiment Analysis GitHub">
-
-                            <i class="fa-brands fa-github"></i>
-
-                        </a>
-
-                    </div>
-
-                    <h3>Sentiment Analysis</h3>
-
-                    <p>
-                        Machine Learning project that classifies
-                        text sentiment using CountVectorizer and
-                        Logistic Regression.
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>Python</span>
-                        <span>ML</span>
-                        <span>NLP</span>
-                        <span>Logistic Regression</span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- SPAM -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            <i class="fa-solid fa-message"></i>
-                        </div>
-
-                        <a
-                            href="https://github.com/parulpal637/Spam-Message-Detector"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                            aria-label="Spam Detector GitHub">
-
-                            <i class="fa-brands fa-github"></i>
-
-                        </a>
-
-                    </div>
-
-                    <h3>Spam Message Detector</h3>
-
-                    <p>
-                        Machine Learning application that identifies
-                        whether a text message is spam or legitimate
-                        using NLP-based text classification.
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>Python</span>
-                        <span>Machine Learning</span>
-                        <span>NLP</span>
-
-                    </div>
-
-                </article>
-
-
-                <!-- MUSIC -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-icon">
-                            <i class="fa-solid fa-music"></i>
-                        </div>
-
-                        <a
-                            href="https://github.com/parulpal637/Emotion_based_music_recommendation_system"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                            aria-label="Music Recommendation GitHub">
-
-                            <i class="fa-brands fa-github"></i>
-
-                        </a>
-
-                    </div>
-
-                    <h3>
-                        Emotion-Based Music Recommendation System
-                    </h3>
-
-                    <p>
-                        AI-powered music recommendation application
-                        that connects user emotions with personalized
-                        music experiences.
-                    </p>
-
-                    <div class="project-tags">
-
-                        <span>Python</span>
-                        <span>Flask</span>
-                        <span>AI</span>
-                        <span>Music Recommendation</span>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-                         EXPERIENCE
-        ================================================== -->
-
-        <section
-            class="section experience-section"
-            id="experience">
-
-            <div class="section-heading">
-
-                <span class="section-number">04.</span>
-
-                <h2>Experience & Contributions</h2>
-
-            </div>
-
-            <div class="timeline">
-
-
-                <!-- PRANOVATE -->
-
-                <div class="timeline-item">
-
-                    <div class="timeline-dot"></div>
-
-                    <div class="timeline-content">
-
-                        <span class="timeline-date">
-                            Dec 2025 — Jan 2026
-                        </span>
-
-                        <h3>
-                            AI/ML Intern
-                        </h3>
-
-                        <h4>
-                            Pranovate IT Solutions PVT LTD
-                        </h4>
-
-                        <p class="experience-location">
-                            <i class="fa-solid fa-location-dot"></i>
-                            Remote
-                        </p>
-
-                        <p>
-                            Worked as an AI/ML Intern, gaining practical
-                            experience in Artificial Intelligence and
-                            Machine Learning in a remote professional
-                            environment.
-                        </p>
-
-                        <div class="timeline-tags">
-
-                            <span>AI/ML</span>
-                            <span>Python</span>
-                            <span>Machine Learning</span>
-                            <span>Remote</span>
-
-                        </div>
-
-
-                        <!-- CERTIFICATE -->
-
-                        <a
-                            href="./1000195488.png"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="certificate-btn">
-
-                            <i class="fa-solid fa-certificate"></i>
-
-                            View Internship Certificate
-
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- GSSOC -->
-
-                <div class="timeline-item">
-
-                    <div class="timeline-dot"></div>
-
-                    <div class="timeline-content">
-
-                        <span class="timeline-date">
-                            2026
-                        </span>
-
-                        <h3>
-                            GirlScript Summer of Code
-                        </h3>
-
-                        <h4>
-                            Contributor / Mentee — AI & Agents Track
-                        </h4>
-
-                        <p>
-                            Selected as a contributor and mentee in
-                            GSSoC 2026. Worked with open-source projects,
-                            GitHub workflows, issues and pull requests
-                            while gaining practical experience collaborating
-                            with developer communities.
-                        </p>
-
-                        <div class="timeline-tags">
-
-                            <span>Open Source</span>
-                            <span>GitHub</span>
-                            <span>AI</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- AI/ML LEARNING -->
-
-                <div class="timeline-item">
-
-                    <div class="timeline-dot"></div>
-
-                    <div class="timeline-content">
-
-                        <span class="timeline-date">
-                            2026 — Present
-                        </span>
-
-                        <h3>
-                            AI/ML Learning Journey
-                        </h3>
-
-                        <h4>
-                            Machine Learning & Development
-                        </h4>
-
-                        <p>
-                            Building practical AI/ML projects while
-                            strengthening Python, NLP, Machine Learning,
-                            Data Structures and algorithmic problem-solving
-                            skills.
-                        </p>
-
-                        <div class="timeline-tags">
-
-                            <span>Python</span>
-                            <span>ML</span>
-                            <span>NLP</span>
-                            <span>DSA</span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-                       CERTIFICATIONS
-        ================================================== -->
-
-        <section
-            class="section certifications-section"
-            id="certifications">
-
-            <div class="section-heading">
-
-                <span class="section-number">05.</span>
-
-                <h2>Certifications & Achievements</h2>
-
-            </div>
-
-            <p class="section-subtitle">
-                Professional certifications, internships,
-                learning achievements and job simulations.
-            </p>
-
-            <div class="certifications-grid">
-
-
-                <!-- PRANOVATE CERTIFICATE -->
-
-                <a
-                    class="cert-card featured-cert"
-                    href="./1000195488.png"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-
-                        <i class="fa-solid fa-briefcase"></i>
-
-                    </div>
-
-                    <div>
-
-                        <span class="cert-badge">
-                            Internship
-                        </span>
-
-                        <h3>
-                            AI/ML Intern
-                        </h3>
-
-                        <p>
-                            Pranovate IT Solutions PVT LTD
-                        </p>
-
-                        <span>
-                            Dec 2025 — Jan 2026
-                        </span>
-
-                        <small>
-                            Remote Internship
-                        </small>
-
-                        <strong class="cert-view">
-                            View Certificate →
-                        </strong>
-
-                    </div>
-
-                </a>
-
-
-                <!-- MICROSOFT AI SKILLS FEST -->
-
-                <a
-                    class="cert-card"
-                    href="https://www.credly.com/earner/earned/badge/445537b3-4cac-4709-890e-1f2d1048c6d3"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-brands fa-microsoft"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>AI Skills Fest 2026</h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued June 2026</span>
-
-                        <small>
-                            Credential ID:
-                            445537b3-4cac-4709-890e-1f2d1048c6d3
-                        </small>
-
-                    </div>
-
-                </a>
-
-
-                <!-- AINCAT -->
-
-                <a
-                    class="cert-card"
-                    href="https://www.naukri.com/campus/certificates/nc_ai_ncat_participation_may_2026/v0/6a1d9cab6039090ed2d1a1c8"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-certificate"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>AINCAT</h3>
-
-                        <p>Naukri.com</p>
-
-                        <span>Issued June 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- NLP -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/37573NBH?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-language"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Introduction to Natural Language
-                            Processing Concepts
-                        </h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued March 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- GENERATIVE AI -->
-
-                <a
-                    class="cert-card"
-                    href="https://www.skills.google/public_profiles/c838c789-6537-4c68-bc31-2fc6a1c5b044"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-cloud"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Introduction to Generative AI
-                        </h3>
-
-                        <p>Google Cloud</p>
-
-                        <span>Issued March 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- MACHINE LEARNING -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/UATTYJ73?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Introduction to Machine Learning
-                            Concepts
-                        </h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued March 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- EXPLORE GENERATIVE AI -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/Q5YCZBQE?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>Explore Generative AI</h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued March 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- AI BASICS -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/XE6GS55Y?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>Explore AI Basics</h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued February 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- COPILOT AGENTS -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/PGY9DXJ4?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-users-gear"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>Microsoft 365 Copilot Agents</h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued February 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- PREBUILT AGENTS -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/AKUJV9Q7?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-gears"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Explore Prebuilt Microsoft 365
-                            Copilot Agents
-                        </h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued February 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- AGENTS -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/HZT74RU8?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>Get Started with Agents</h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued February 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- COPILOT AI -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/UAD8RDD3?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-laptop-code"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Work Smarter with AI Using
-                            Microsoft Copilot
-                        </h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued February 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- COPILOT CHAT -->
-
-                <a
-                    class="cert-card"
-                    href="https://learn.microsoft.com/api/achievements/share/en-us/ParulPal-8679/ELNLFKGP?sharingId=E8363FA626F90F7E"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-comments"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Microsoft 365 Copilot Chat
-                        </h3>
-
-                        <p>Microsoft</p>
-
-                        <span>Issued February 2026</span>
-
-                    </div>
-
-                </a>
-
-
-                <!-- DELOITTE DATA ANALYTICS -->
-
-                <a
-                    class="cert-card"
-                    href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/io9DzWKe3PTsiS6GG_9PBTqmSxAf6zZTseP_KYhyYSSyNr6Y3J9x2_1770270594472_completion_certificate.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-chart-line"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Deloitte Australia -
-                            Data Analytics Job Simulation
-                        </h3>
-
-                        <p>Forage</p>
-
-                        <span>Issued February 2026</span>
-
-                        <small>
-                            Credential ID:
-                            Z8Ps43puDizYsH7Kv
-                        </small>
-
-                    </div>
-
-                </a>
-
-
-                <!-- MULTICLOUD -->
-
-                <div class="cert-card">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-cloud-arrow-up"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            2-Hour Multicloud Workshop
-                        </h3>
-
-                        <p>
-                            CoreXtech IT Services Pvt. Ltd.
-                        </p>
-
-                        <span>Issued November 2025</span>
-
-                        <small>
-                            Credential ID:
-                            CERT-25F0080E-1
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-                <!-- MULTICLOUD 2 -->
-
-                <div class="cert-card">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-cloud"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Multicloud 2-Hours Workshop
-                        </h3>
-
-                        <p>
-                            CoreXtech IT Services Pvt. Ltd.
-                        </p>
-
-                        <span>Issued November 2025</span>
-
-                        <small>
-                            Credential ID:
-                            CERT-3FABBA1D
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-                <!-- TATA CYBERSECURITY -->
-
-                <a
-                    class="cert-card"
-                    href="https://www.theforage.com/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Tata Group -
-                            Cybersecurity Analyst Job Simulation
-                        </h3>
-
-                        <p>Forage</p>
-
-                        <span>Issued June 2025</span>
-
-                        <small>
-                            Credential ID:
-                            Zp9qLmKNeggu8iqFK
-                        </small>
-
-                    </div>
-
-                </a>
-
-
-                <!-- DELOITTE CYBER -->
-
-                <a
-                    class="cert-card"
-                    href="https://www.theforage.com/"
-                    target="_blank"
-                    rel="noopener noreferrer">
-
-                    <div class="cert-icon">
-                        <i class="fa-solid fa-user-shield"></i>
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Deloitte Australia -
-                            Cyber Job Simulation
-                        </h3>
-
-                        <p>Forage</p>
-
-                        <span>Issued June 2025</span>
-
-                        <small>
-                            Credential ID:
-                            rDodzi7jk8sKfbttx
-                        </small>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-                            GITHUB
-        ================================================== -->
-
-        <section class="github-section">
-
-            <div class="github-content">
-
-                <div>
-
-                    <span class="github-label">
-
-                        <i class="fa-brands fa-github"></i>
-
-                        Open Source
-
-                    </span>
-
-                    <h2>
-                        Explore my work on GitHub
-                    </h2>
-
-                    <p>
-                        Check out my projects, experiments,
-                        contributions and coding journey.
-                    </p>
-
-                </div>
-
-                <a
-                    href="https://github.com/parulpal637"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn github-btn">
-
-                    Visit GitHub
-
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-                            CONTACT
-        ================================================== -->
-
-        <section
-            class="section contact-section"
-            id="contact">
-
-            <div class="section-heading">
-
-                <span class="section-number">06.</span>
-
-                <h2>Let's Connect</h2>
-
-            </div>
-
-            <div class="contact-content">
-
-                <div class="contact-text">
-
-                    <h3>
-                        Looking for an AI/ML opportunity?
-                    </h3>
-
-                    <p>
-                        I'm actively looking for AI/ML internship
-                        opportunities where I can learn from experienced
-                        teams, contribute to real-world projects and
-                        grow as an AI/ML engineer.
-                    </p>
-
-                    <a
-                        href="./Resume -_Parul Pal.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn primary-btn resume-btn">
-
-                        <i class="fa-solid fa-file-pdf"></i>
-
-                        View My Resume
-
-                    </a>
-
-                </div>
-
-
-                <div class="contact-cards">
-
-
-                    <!-- EMAIL -->
-
-                    <a
-                        href="mailto:eng.parul5418@gmail.com"
-                        class="contact-card">
-
-                        <div class="contact-icon">
-
-                            <i class="fa-solid fa-envelope"></i>
-
-                        </div>
-
-                        <div>
-
-                            <span>Email</span>
-
-                            <strong>
-                                eng.parul5418@gmail.com
-                            </strong>
-
-                        </div>
-
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                    </a>
-
-
-                    <!-- LINKEDIN -->
-
-                    <a
-                        href="https://www.linkedin.com/in/parul-pal-93a417349/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="contact-card">
-
-                        <div class="contact-icon">
-
-                            <i class="fa-brands fa-linkedin-in"></i>
-
-                        </div>
-
-                        <div>
-
-                            <span>LinkedIn</span>
-
-                            <strong>
-                                Connect with me
-                            </strong>
-
-                        </div>
-
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                    </a>
-
-
-                    <!-- GITHUB -->
-
-                    <a
-                        href="https://github.com/parulpal637"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="contact-card">
-
-                        <div class="contact-icon">
-
-                            <i class="fa-brands fa-github"></i>
-
-                        </div>
-
-                        <div>
-
-                            <span>GitHub</span>
-
-                            <strong>
-                                parulpal637
-                            </strong>
-
-                        </div>
-
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =====================================================
-                            FOOTER
-    ====================================================== -->
-
-    <footer>
-
-        <div class="footer-content">
-
-            <a href="#home" class="logo">
-
-                <span>&lt;</span>
-                Parul
-                <span>/&gt;</span>
-
-            </a>
-
+        <div class="hero-image">
+          <div class="profile-image-frame">
+            <img
+              src="parul.jpeg"
+              alt="Parul Pal"
+              class="profile-image"
+              width="320"
+              height="320"
+              fetchpriority="high">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">GET TO KNOW ME</p>
+          <h2>About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text">
             <p>
-                Designed & built by Parul Pal
+              I'm a Bachelor of Computer Applications (BCA) student at
+              Hi-Tech Institute of Engineering & Technology, Ghaziabad,
+              affiliated with Chaudhary Charan Singh University.
             </p>
+            <p>
+              My interests include Python development, artificial intelligence,
+              machine learning, natural language processing, and software
+              engineering. I learn by building projects and experimenting
+              with real-world applications.
+            </p>
+            <p>
+              I'm looking for opportunities where I can contribute to a
+              development team, learn from experienced engineers, and build
+              reliable software.
+            </p>
+          </div>
 
-            <div class="footer-socials">
-
-                <a
-                    href="https://github.com/parulpal637"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub">
-
-                    <i class="fa-brands fa-github"></i>
-
-                </a>
-
-                <a
-                    href="https://www.linkedin.com/in/parul-pal-93a417349/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn">
-
-                    <i class="fa-brands fa-linkedin-in"></i>
-
-                </a>
-
-                <a
-                    href="mailto:eng.parul5418@gmail.com"
-                    aria-label="Email">
-
-                    <i class="fa-solid fa-envelope"></i>
-
-                </a>
-
+          <div class="about-details">
+            <div class="detail-card">
+              <span class="detail-label">Degree</span>
+              <h3>Bachelor of Computer Applications</h3>
             </div>
+            <div class="detail-card">
+              <span class="detail-label">Institute</span>
+              <h3>HIET, Ghaziabad</h3>
+            </div>
+            <div class="detail-card">
+              <span class="detail-label">Graduation</span>
+              <h3>Expected 2027</h3>
+            </div>
+            <div class="detail-card">
+              <span class="detail-label">CGPA</span>
+              <h3>7.8</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT I WORK WITH</p>
+          <h2>Technical Skills</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3>Programming</h3>
+            <div class="skill-tags">
+              <span>Python</span>
+              <span>C++</span>
+              <span>OOP</span>
+              <span>SQL Basics</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <h3>AI & Machine Learning</h3>
+            <div class="skill-tags">
+              <span>Machine Learning</span>
+              <span>NLP</span>
+              <span>scikit-learn</span>
+              <span>Sentence Transformers</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Data & Tools</h3>
+            <div class="skill-tags">
+              <span>Pandas</span>
+              <span>NumPy</span>
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>VS Code</span>
+            </div>
+          </article>
+
+          <article class="skill-card">
+            <h3>Web & Deployment</h3>
+            <div class="skill-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Flask</span>
+              <span>Streamlit</span>
+              <span>Vercel</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SOME THINGS I'VE BUILT</p>
+          <h2>Featured Projects</h2>
+          <p>Explore my projects and try the live applications where available.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-category">AI · Edge Computing</span>
+              <span class="project-icon">◉</span>
+            </div>
+            <h3>SoundGuard</h3>
+            <p>
+              An on-device fan health monitoring project that analyzes audio
+              and CPU load to help detect abnormal fan behavior, with a focus
+              on privacy and local inference.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>ONNX Runtime</span>
+              <span>Flask</span><span>Machine Learning</span>
+            </div>
+            <div class="project-links">
+              <a href="https://sound-guard-kohl.vercel.app/"
+                 target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+              <a href="https://github.com/parulpal637/SoundGuard"
+                 target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-category">Web · File Sharing</span>
+              <span class="project-icon">⇄</span>
+            </div>
+            <h3>P2P File Drop</h3>
+            <p>
+              A privacy-focused peer-to-peer file-sharing application that
+              uses WebRTC to transfer files directly between browsers without
+              relying on a traditional cloud file-storage server.
+            </p>
+            <div class="project-tech">
+              <span>JavaScript</span><span>WebRTC</span>
+              <span>HTML</span><span>CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://p2p-file-drop.vercel.app/"
+                 target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+              <a href="https://github.com/parulpal637/p2p-file-drop"
+                 target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-category">FinTech · Automation</span>
+              <span class="project-icon">₹</span>
+            </div>
+            <h3>CashGuard-AI</h3>
+            <p>
+              An invoice-focused project designed to organize payment
+              information and highlight potential savings through timely
+              invoice payments.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>Flask</span>
+              <span>SQLite</span><span>Automation</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/parulpal637/CashGuard-AI"
+                 target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-category">AI · NLP</span>
+              <span class="project-icon">▤</span>
+            </div>
+            <h3>AI Resume Analyzer</h3>
+            <p>
+              An AI-powered resume analysis and job-matching application
+              that extracts resume content and compares it with job-related
+              text using semantic similarity.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>Streamlit</span>
+              <span>PyMuPDF</span><span>Sentence Transformers</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/parulpal637/AI-Resume-Analyzer"
+                 target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-category">NLP · Text Analysis</span>
+              <span class="project-icon">≋</span>
+            </div>
+            <h3>AI Plagiarism Detection</h3>
+            <p>
+              A text-similarity project that compares documents using NLP
+              techniques and classifies content based on similarity levels.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>NLP</span>
+              <span>TF-IDF</span><span>Cosine Similarity</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/parulpal637/AI-Based-Plagiarism-Detection-System-using-NLP-LLMs"
+                 target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-category">Python · Finance</span>
+              <span class="project-icon">◷</span>
+            </div>
+            <h3>Smart Expense Tracker</h3>
+            <p>
+              A personal finance project designed to record expenses,
+              organize spending information, and support awareness of
+              everyday spending habits.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>Data Handling</span><span>Finance</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/parulpal637/smart-expense-tracker"
+                 target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-category">Machine Learning · NLP</span>
+              <span class="project-icon">◌</span>
+            </div>
+            <h3>Sentiment Analysis ML</h3>
+            <p>
+              A machine learning project that analyzes text and predicts
+              sentiment from written input.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>Machine Learning</span><span>NLP</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/parulpal637/Sentiment-Analysis-ML"
+                 target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-category">Machine Learning · NLP</span>
+              <span class="project-icon">⌕</span>
+            </div>
+            <h3>Spam Message Detector</h3>
+            <p>
+              A text-classification project using machine learning and
+              vectorization to distinguish spam from legitimate messages.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>scikit-learn</span><span>CountVectorizer</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/parulpal637/Spam-Message-Detector"
+                 target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-category">AI · Recommendation</span>
+              <span class="project-icon">♫</span>
+            </div>
+            <h3>Emotion-Based Music Recommendation</h3>
+            <p>
+              A project exploring emotion-based music recommendations,
+              connecting emotional states with suitable music suggestions.
+            </p>
+            <div class="project-tech">
+              <span>Python</span><span>AI</span><span>Recommendation Systems</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/parulpal637/Emotion_based_music_recommendation_system"
+                 target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <span class="project-category">Web · Product Concept</span>
+              <span class="project-icon">⌂</span>
+            </div>
+            <h3>Vehline</h3>
+            <p>
+              A used-car marketplace concept focused on SUVs and sedans,
+              with vehicle listings and ideas intended to simplify buying
+              and selling.
+            </p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span>
+              <span>JavaScript</span><span>Product Design</span>
+            </div>
+            <div class="project-links">
+              <a href="https://www.instagram.com/veh_line/"
+                 target="_blank" rel="noopener noreferrer">Project Page ↗</a>
+            </div>
+          </article>
 
         </div>
 
-        <p class="copyright">
-            © 2026 Parul Pal. All rights reserved.
+        <div class="projects-footer">
+          <a href="https://github.com/parulpal637?tab=repositories"
+             class="btn btn-secondary"
+             target="_blank" rel="noopener noreferrer">
+            View All GitHub Repositories ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">MY JOURNEY</p>
+          <h2>Experience & Contributions</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-date">December 2025 – January 2026</span>
+            <h3>AI/ML Intern</h3>
+            <h4>Pranovate IT Solutions</h4>
+            <p>
+              Gained practical exposure to Python-based development and
+              machine learning workflows during an AI/ML internship.
+            </p>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-date">2026</span>
+            <h3>Contributor / Mentee</h3>
+            <h4>GirlScript Summer of Code — AI & Agents Track</h4>
+            <p>
+              Participated in an open-source learning environment focused
+              on collaborative development and AI-related contributions.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">ACADEMIC BACKGROUND</p>
+          <h2>Education</h2>
+        </div>
+
+        <div class="education-grid">
+          <article class="education-card">
+            <span class="detail-label">2024 – 2027</span>
+            <h3>Bachelor of Computer Applications</h3>
+            <p>HIET, Ghaziabad</p>
+            <p>Chaudhary Charan Singh University</p>
+            <p><strong>CGPA:</strong> 7.8</p>
+          </article>
+
+          <article class="education-card">
+            <span class="detail-label">2024</span>
+            <h3>Class XII</h3>
+            <p>Percentage: 68.4%</p>
+          </article>
+
+          <article class="education-card">
+            <span class="detail-label">2022</span>
+            <h3>Class X</h3>
+            <p>Percentage: 78%</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="section section-alt" id="achievements">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">MILESTONES</p>
+          <h2>Achievements</h2>
+        </div>
+
+        <div class="achievements-grid">
+          <article class="achievement-card">
+            <span class="achievement-icon">🏆</span>
+            <h3>Academic Achievement</h3>
+            <p>
+              Secured first prize after ranking first in the BCA second year.
+            </p>
+          </article>
+
+          <article class="achievement-card">
+            <span class="achievement-icon">⚡</span>
+            <h3>Crossroar Technical Fest</h3>
+            <p>
+              Led a four-member technical project team and coordinated
+              tasks under a tight deadline. The team secured fourth place.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">CONTINUOUS LEARNING</p>
+          <h2>Licenses & Certifications</h2>
+          <p>
+            Click a certificate card to open my LinkedIn certifications
+            page. Individual credential links can be added for direct
+            verification.
+          </p>
+        </div>
+
+        <div class="certifications-grid">
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Certificate of Completion</h3>
+            <p>KnowledgeGate · October 2026</p>
+            <p>Credential ID: CERT-1791564891086-C0B398CF</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>AI Skills Fest 2026</h3>
+            <p>Microsoft · June 2026</p>
+            <p>Credential ID: 445537b3-4cac-4709-890e-1f2d1048c6d3</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>AINCAT</h3>
+            <p>Naukri.com · June 2026</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Introduction to Natural Language Processing Concepts</h3>
+            <p>Microsoft · March 2026</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Introduction to Generative AI</h3>
+            <p>Google Cloud Security · March 2026</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Introduction to Machine Learning Concepts</h3>
+            <p>Microsoft · March 2026</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Explore Generative AI</h3>
+            <p>Microsoft · March 2026</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Explore AI Basics</h3>
+            <p>Microsoft · February 2026</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Enhance Your Productivity with Prebuilt Microsoft 365 Copilot Agents</h3>
+            <p>Microsoft · February 2026</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Explore Prebuilt Microsoft 365 Copilot Agents</h3>
+            <p>Microsoft · February 2026</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Get Started with Agents</h3>
+            <p>Microsoft · February 2026</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Work Smarter with AI Using Microsoft Copilot</h3>
+            <p>Microsoft · February 2026</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Work Smarter with AI Using Microsoft Copilot</h3>
+            <p>Microsoft · February 2026 · Additional listing</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Get Started with Microsoft 365 Copilot Chat</h3>
+            <p>Microsoft · February 2026</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Deloitte Australia — Data Analytics Job Simulation</h3>
+            <p>Forage · February 2026</p>
+            <p>Credential ID: Z8Ps43puDizYsH7Kv</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>2-Hour Multicloud Workshop</h3>
+            <p>CoreXtech IT Services Pvt. Ltd. · November 2025</p>
+            <p>Credential ID: CERT-25F0080E-1</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Multicloud 2-Hours Workshop</h3>
+            <p>CoreXtech IT Services Pvt. Ltd. · November 2025</p>
+            <p>Credential ID: CERT-3FABBA1D</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Automation Testing Skills to Crack QA Roles in Top Tech Companies</h3>
+            <p>HCL GUVI · November 2025</p>
+            <p>Credential ID: N610mR2uW66739nz56</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Tata Group — Cybersecurity Analyst Job Simulation</h3>
+            <p>Forage · June 2025</p>
+            <p>Credential ID: Zp9qLmKNeggu8iqFK</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+          <a class="certification-card"
+             href="https://www.linkedin.com/in/parul-pal-93a417349/details/certifications/"
+             target="_blank" rel="noopener noreferrer">
+            <h3>Deloitte Australia — Cyber Job Simulation</h3>
+            <p>Forage · June 2025</p>
+            <p>Credential ID: rDodzi7jk8sKfbttx</p>
+            <span class="cert-link">View Certificate ↗</span>
+          </a>
+
+        </div>
+
+        <p class="section-note">
+          For direct verification, replace each card's LinkedIn URL with
+          the corresponding certificate's individual "Show credential" URL.
         </p>
+      </div>
+    </section>
 
-    </footer>
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">LET'S CONNECT</p>
+          <h2>Contact Me</h2>
+          <p>
+            I'm open to suitable entry-level software development and AI/ML
+            opportunities, collaborations, and project discussions.
+          </p>
+        </div>
 
+        <div class="contact-grid">
+          <a href="mailto:eng.parul5418@gmail.com" class="contact-card">
+            <span class="contact-icon">✉</span>
+            <h3>Email</h3>
+            <p>eng.parul5418@gmail.com</p>
+          </a>
 
-    <!-- =====================================================
-                         SCROLL TOP
-    ====================================================== -->
+          <a href="https://www.linkedin.com/in/parul-pal-93a417349/"
+             class="contact-card"
+             target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon">in</span>
+            <h3>LinkedIn</h3>
+            <p>Connect professionally</p>
+          </a>
 
-    <button
-        id="scrollTop"
-        class="scroll-top"
-        aria-label="Scroll to top">
+          <a href="https://github.com/parulpal637"
+             class="contact-card"
+             target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon">⌘</span>
+            <h3>GitHub</h3>
+            <p>Explore my code</p>
+          </a>
 
-        <i class="fa-solid fa-arrow-up"></i>
+          <a href="https://leetcode.com/u/Parulpal637/"
+             class="contact-card"
+             target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon">{ }</span>
+            <h3>LeetCode</h3>
+            <p>Explore my coding practice</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
-    </button>
+  </main>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#home" class="logo">Parul<span>.</span></a>
+      <p>Built with curiosity and a passion for learning.</p>
+      <p>© <span id="current-year">2026</span> Parul Pal. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <!-- =====================================================
-                         JAVASCRIPT
-    ====================================================== -->
+  <!-- MOBILE NAVIGATION + CURRENT YEAR -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
 
-    <script src="script.js"></script>
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.getElementById("current-year").textContent =
+      new Date().getFullYear();
+  </script>
 
 </body>
-
 </html>
